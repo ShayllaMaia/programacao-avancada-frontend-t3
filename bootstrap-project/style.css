@@ -1,5 +1,78 @@
-#container {
-    margin: 20px;
-    width: 200px;
-    height: 200px;
+  /* Geral */
+  body{
+    font-family: 'Roboto', sans-serif;
+
+  }
+
+  .container-fluid{
+    padding: 70px 0; 
+  }
+
+  .row{
+    margin: 0;
+
+  }
+
+  p, li {
+    color: #212121;
+    font-size: 14px;
+
+  }
+
+  /* Sobre */
+  #about-area{
+    background-color: #f2f3f4;
+  }
+
+  .main-title{
+    color: #212121;
+    margin: 0 0 65px 0;
+    text-align: center;
+    font-size: 40px;
+  }
+
+  #about-title{
+    color: #212121;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 17px;
+  }
+
+  #about-list{
+    list-style: none;
+    padding: 0;
+  }
+
+  #about-list i {
+    color: #0b7b9e;
+    margin-right: 15px;
+  }
+
+  #about-list li {
+    line-height: 30px;
+  }
+
+  /* Serviços */
+  .services-box{
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .services-box i {
+    font-size: 36px;
+    color: #212121;
+    margin-bottom: 20px;
+  }
+
+  .services-box h3{
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+
+  .services-box:hover > i, .services-box:hover > h3 {
+    color: #0b7b9e;
+  }
+
+  .services-box i, .services-box h3 {
+    transition: 1s;
   }

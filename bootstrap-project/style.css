@@ -89,6 +89,11 @@
 
 
   /* PARALLAX */
+  #data-area p {
+    font-size: 20px;
+    color: #f2f3f4;
+  }
+
   .parallax {
     background-image: url("./img/cidadeparallax.png");
     min-height: 350px;
@@ -96,6 +101,14 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  #circle-a {
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+    position: relative;
+  }
+
 
   /* Time */
   #team-area{

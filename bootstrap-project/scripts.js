@@ -1,14 +1,26 @@
-// progressbar.js@1.0.0 version is used
-// Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
-
-var bar = new ProgressBar.Circle(container, {
-    strokeWidth: 6,
+  let circleA = document.getElementById('circleA')
+  let containerA = new ProgressBar.Circle(circleA, {
+    color: '#aaa',
+    strokeWidth: 4,
+    trailWidth: 1,
     easing: 'easeInOut',
     duration: 1400,
-    color: '#FFEA82',
-    trailColor: '#eee',
-    trailWidth: 1,
-    svgStyle: null
-  });
+    text: {
+      autoStyleContainer: true
+    },
+    from: { color: '#aaa', width: 1 },
+    to: { color: '#333', width: 4 },
+    step: function(state, circle) {
+      circle.path.setAttribute('stroke', state.color);
+      circle.path.setAttribute('stroke-width', state.width);
   
-  bar.animate(1.0);  // Number from 0.0 to 1.0
+      let value = Math.round(circle.value() * 100);
+      if (value === 0) {
+        circle.setText('');
+      } else {
+        circle.setText(value);
+      }
+  
+    }
+  });
+  containerA.animate(1.0);  

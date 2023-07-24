@@ -89,9 +89,21 @@
 
 
   /* PARALLAX */
-  #data-area p {
+
+  /* Data area */
+ #circleA ,#circleB,#circleC,#circleD{
+  margin: 20px;
+  width: 200px;
+  height: 200px;
+  margin-left: auto;
+  margin-right:auto;
+  /* position: relative; */
+  }
+
+  #data-area p{
     font-size: 20px;
-    color: #f2f3f4;
+    color: white;
+    
   }
 
   .parallax {
@@ -100,13 +112,7 @@
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-  }
-
-  #circle-a {
-    margin: 20px;
-    width: 200px;
-    height: 200px;
-    position: relative;
+    margin-bottom: 5em;
   }
 
 
@@ -152,3 +158,79 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  /* PORTIFÓLIO */
+  .project-box {
+      margin-bottom: 30px;
+  }
+  
+  #filter-btn-box {
+      margin-bottom: 50px;
+      text-align: center;
+  }
+  
+  #portifolio-area .filter-btn {
+      color: #0c0c0c;
+      border: 1px solid #0c0c0c;
+      background-color: transparent;
+      text-transform: none;
+      margin: 0 15px;
+      min-width: 100px;
+      width: auto;
+      height: 40px;
+      line-height: 40px;
+      padding: 0 20px;
+  }
+  
+  #portifolio-area .filter-btn.active, #portifolio-area .filter-btn:hover {
+      color: #f2f3f4;
+      background-color: #0b7b9e;
+      border-color: #0b7b9e;
+  }
+
+  .main-btn{
+    border-radius: 30px;
+  }
+  
+/* NOVIDADES */
+
+#news-area {
+  text-align: center;
+  background-color: #F9F9F9;
+  padding: 50px;
+}
+
+#news-area p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+#email {
+  border-radius: 0;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border: 1px solid #035b7a;
+  display: inline;
+  box-sizing: border-box;
+  width: 40%;
+  height: 40px;
+}
+
+#news-btn {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: 1px solid #0b7b9e;
+  background-color: #0b7b9e;
+  color: #f2f3f4;
+  text-transform: uppercase;
+  height: 40px;
+  padding: 0 30px;
+  margin-left: -130px;
+  position: absolute;
+  transition: .5s;
+}
+
+#news-btn:hover {
+  background-color: #f2f3f4;
+  color: #0b7b9e;
+}

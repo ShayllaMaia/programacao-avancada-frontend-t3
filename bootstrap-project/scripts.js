@@ -126,3 +126,71 @@ containerC.animate(1.0);
 containerD.animate(1.0);  
 
 
+let navBtn = $('.nav-item');
+
+let bannerSection = $('#carousel-menu');
+let aboutSection = $('#about-menu');
+let servicesSection = $('#services-menu');
+let teamSection = $('#team-menu');
+let portfolioSection = $('#portifolio-menu');
+let contactSection = $('#contact-menu');
+
+let scrollTo = '';
+
+$(navBtn).click(function() {
+  
+  let btnId = $(this).attr('id');
+  
+  if(btnId == 'about-menu') {
+    scrollTo = aboutSection;
+  } else if(btnId == 'services-menu') {
+    scrollTo = servicesSection;
+  } else if(btnId == 'team-menu') {
+    scrollTo = teamSection;
+  } else if(btnId == 'portfolio-menu') {
+    scrollTo = portfolioSection;
+  } else if(btnId == 'contact-menu') {
+    scrollTo = contactSection;
+  } else {
+    scrollTo = bannerSection;
+  }
+  
+  $([document.documentElement, document.body]).animate({      scrollTop: $(scrollTo).offset().top - 70  
+}, 1500);});
+
+
+
+
+
+$('.filter-btn').on('click', function () {
+  let type = $(this).attr('id');
+  let boxes = $('.project-box');
+
+  $('.main-btn').removeClass('active');
+  $(this).addClass('active');
+
+  if (type == 'design-btn') {
+      eachBoxes('design', boxes);
+  } else if (type == 'dev-btn') {
+      eachBoxes('dev', boxes);
+  } else if (type == 'seo-btn') {
+      eachBoxes('seo', boxes);
+  } else {
+      eachBoxes('all', boxes);
+  }
+
+});
+
+function eachBoxes(type, boxes) {
+  if (type == 'all') {
+      $(boxes).fadeIn();
+  } else {
+      $(boxes).each(function () {
+          if (!$(this).hasClass(type)) {
+              $(this).fadeOut('slow');
+          } else {
+              $(this).fadeIn();
+          }
+      });
+  }
+}
